@@ -1,0 +1,11 @@
+0000000000000000000000000000000000000000 9623b13013874475c405bf585c236a448980a051 za8kfjo <49918241-za8kfjo@users.noreply.replit.com> 1763566387 +0000	commit (initial): Initial commit
+9623b13013874475c405bf585c236a448980a051 120086819cd4ba3e0262378a67aaf624005e0f9f za8kfjo <49918241-za8kfjo@users.noreply.replit.com> 1763566553 +0000	commit: Extracted stack files
+120086819cd4ba3e0262378a67aaf624005e0f9f 1fad30eca2aae4cc52d23b114bb774454e14d727 za8kfjo <49918241-za8kfjo@users.noreply.replit.com> 1763566753 +0000	commit: Update project to include new pages and improve styling
+1fad30eca2aae4cc52d23b114bb774454e14d727 546387a03cc61537b106f4e304cdd054cdcff3fe za8kfjo <49918241-za8kfjo@users.noreply.replit.com> 1763567486 +0000	commit: Saved progress at the end of the loop
+546387a03cc61537b106f4e304cdd054cdcff3fe 23a5839bba2e10577676d370ba3dd7dff3e2ebe9 za8kfjo <49918241-za8kfjo@users.noreply.replit.com> 1763568184 +0000	commit: Add user authentication pages and integrate Clerk for sign-in and sign-up
+23a5839bba2e10577676d370ba3dd7dff3e2ebe9 2b1ad564701e15e0c45971804e5a7fed5d4c2635 neuraboxofficial-stack <neurabox.official@gmail.com> 1763582271 +0500	commit: Ignore system folders
+2b1ad564701e15e0c45971804e5a7fed5d4c2635 61754218c43e8cc6f0501b517e25db022ff2a9d8 neuraboxofficial-stack <neurabox.official@gmail.com> 1763582353 +0500	commit: Remove system folders from repo
+61754218c43e8cc6f0501b517e25db022ff2a9d8 774e8209a9d4cee0e52389819bbe4f1d7672cc4f neuraboxofficial-stack <neurabox.official@gmail.com> 1763582503 +0500	commit: Add F:\LumixCodeFinal v1.0 using Git LFS
+774e8209a9d4cee0e52389819bbe4f1d7672cc4f 1c8ea892d687ee260e73cb69a32ccc00fe009bbb neuraboxofficial-stack <neurabox.official@gmail.com> 1763582901 +0500	commit: Remove oversized file from Git history
+1c8ea892d687ee260e73cb69a32ccc00fe009bbb 61f364c5bd7b583bdb2e80d76f9cd37c5cff1502 neuraboxofficial-stack <neurabox.official@gmail.com> 1763582959 +0500	commit: Add large file via Git LFS
+61f364c5bd7b583bdb2e80d76f9cd37c5cff1502 61f364c5bd7b583bdb2e80d76f9cd37c5cff1502 neuraboxofficial-stack <neurabox.official@gmail.com> 1763583696 +0500	reset: moving to HEAD
