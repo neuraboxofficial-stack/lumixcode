@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Mic, Upload, Lock, Send, Sparkles } from "lucide-react";
 import { SiReact, SiVuedotjs, SiAngular, SiSvelte, SiNextdotjs, SiNuxtdotjs, SiRemix, SiAstro, SiFigma, SiNotion, SiLinear, SiSlack } from "react-icons/si";
@@ -22,6 +23,7 @@ const integrations = [
 ];
 
 export default function HeroSection() {
+  const [, setLocation] = useLocation();
   const [projectInput, setProjectInput] = useState("");
   const [isPublic, setIsPublic] = useState(true);
   const [displayedText, setDisplayedText] = useState("");
@@ -42,7 +44,7 @@ export default function HeroSection() {
   }, []);
 
   const handleStartProject = () => {
-    console.log("Starting project with:", projectInput);
+    setLocation("/sign-up");
   };
 
   return (

@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import { Button } from "@/components/ui/button";
 import logoImage from "@assets/White_LumixCode_logo-removebg-preview.png";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
-  // Check if Clerk is available
-  const hasClerk = !!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
@@ -31,16 +29,28 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center gap-3">
-            <Link href="/waitlist">
-              <Button variant="ghost" size="sm" data-testid="button-signin">
-                Join Waitlist
-              </Button>
-            </Link>
-            <Link href="/founders-forge">
-              <Button size="sm" className="animate-glow" data-testid="button-start-free">
-                Founders Forge
-              </Button>
-            </Link>
+            <SignedOut>
+              <Link href="/sign-in">
+                <Button variant="ghost" size="sm" data-testid="button-signin">
+                  Sign In
+                </Button>
+              </Link>
+              <Link href="/sign-up">
+                <Button size="sm" className="animate-glow" data-testid="button-start-free">
+                  Start for free
+                </Button>
+              </Link>
+            </SignedOut>
+            <SignedIn>
+              <UserButton 
+                afterSignOutUrl="/"
+                appearance={{
+                  elements: {
+                    avatarBox: "w-9 h-9"
+                  }
+                }}
+              />
+            </SignedIn>
           </div>
 
           <button
@@ -78,16 +88,30 @@ export default function Navbar() {
               Pricing
             </Link>
             <div className="pt-3 space-y-2 border-t">
-              <Link href="/waitlist" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="ghost" className="w-full" data-testid="button-signin-mobile">
-                  Join Waitlist
-                </Button>
-              </Link>
-              <Link href="/founders-forge" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full" data-testid="button-start-free-mobile">
-                  Founders Forge
-                </Button>
-              </Link>
+              <SignedOut>
+                <Link href="/sign-in" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full" data-testid="button-signin-mobile">
+                    Sign In
+                  </Button>
+                </Link>
+                <Link href="/sign-up" onClick={() => setMobileMenuOpen(false)}>
+                  <Button className="w-full" data-testid="button-start-free-mobile">
+                    Start for free
+                  </Button>
+                </Link>
+              </SignedOut>
+              <SignedIn>
+                <div className="flex items-center justify-center py-2">
+                  <UserButton 
+                    afterSignOutUrl="/"
+                    appearance={{
+                      elements: {
+                        avatarBox: "w-10 h-10"
+                      }
+                    }}
+                  />
+                </div>
+              </SignedIn>
             </div>
           </div>
         </div>

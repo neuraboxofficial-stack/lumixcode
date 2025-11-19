@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -16,13 +17,17 @@ export default function CTASection() {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" className="h-14 px-10 text-base animate-glow" data-testid="button-cta-start">
-            Start Free Trial
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
-          <Button variant="outline" size="lg" className="h-14 px-10 text-base" data-testid="button-cta-demo">
-            Watch Demo
-          </Button>
+          <Link href="/sign-up">
+            <Button size="lg" className="h-14 px-10 text-base animate-glow" data-testid="button-cta-start">
+              Start for free
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          </Link>
+          <Link href="/sign-up">
+            <Button variant="outline" size="lg" className="h-14 px-10 text-base" data-testid="button-cta-demo">
+              Watch Demo
+            </Button>
+          </Link>
         </div>
         
         <p className="text-sm text-muted-foreground mt-6">
