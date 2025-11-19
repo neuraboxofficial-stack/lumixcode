@@ -113,7 +113,7 @@ const faqs = [
 ];
 
 export default function FoundersForge() {
-  const [spotsTaken, setSpotsTaken] = useState(72);
+  const [spotsTaken, setSpotsTaken] = useState(89);
   const [timeLeft, setTimeLeft] = useState({
     hours: 47,
     minutes: 59,
@@ -123,7 +123,7 @@ export default function FoundersForge() {
   useEffect(() => {
     const spotsInterval = setInterval(() => {
       setSpotsTaken(prev => {
-        if (prev < 100) {
+        if (prev < 500) {
           return prev + (Math.random() > 0.7 ? 1 : 0);
         }
         return prev;
@@ -182,7 +182,7 @@ export default function FoundersForge() {
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/20 mb-8 animate-float">
             <Flame className="w-4 h-4 text-yellow-500" />
-            <span className="text-sm font-medium text-yellow-600 dark:text-yellow-400">LIMITED TO FIRST 100 MEMBERS</span>
+            <span className="text-sm font-medium text-yellow-600 dark:text-yellow-400">LIMITED TO FIRST 500 MEMBERS</span>
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
@@ -193,7 +193,7 @@ export default function FoundersForge() {
           </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
-            Join the first 100 visionaries who'll shape the AI-powered coding platform of the future.
+            Join the first 500 visionaries who'll shape the AI-powered coding platform of the future.
             <br />
             <span className="font-semibold text-foreground">Lifetime 50% off Pro plan, private community, early access to LumixCore, and exclusive badges.</span>
           </p>
@@ -332,7 +332,7 @@ export default function FoundersForge() {
                 className="text-6xl sm:text-7xl font-bold mb-4"
               >
                 <span className="bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent">
-                  {spotsTaken}/100
+                  {spotsTaken}/500
                 </span>
               </motion.div>
               <p className="text-2xl font-semibold mb-2">Founding Spots Taken</p>
@@ -344,7 +344,7 @@ export default function FoundersForge() {
             <div className="w-full bg-muted rounded-full h-4 overflow-hidden">
               <motion.div
                 initial={{ width: 0 }}
-                whileInView={{ width: `${spotsTaken}%` }}
+                whileInView={{ width: `${(spotsTaken / 500) * 100}%` }}
                 transition={{ duration: 1, ease: "easeOut" }}
                 viewport={{ once: true }}
                 className="h-full bg-gradient-to-r from-yellow-500 to-orange-500"
@@ -390,7 +390,7 @@ export default function FoundersForge() {
               </div>
 
               <div className="space-y-4">
-                <p className="text-2xl font-bold">Only 100 Founding Spots Available</p>
+                <p className="text-2xl font-bold">Only 500 Founding Spots Available</p>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
                   We're building LumixCode for people who code. Once spots are gone, they're gone.
                 </p>
